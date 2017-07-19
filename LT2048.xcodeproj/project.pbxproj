@@ -15,6 +15,10 @@
 		6951B1811F1EF3D9001FA9C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6951B17F1F1EF3D9001FA9C0 /* LaunchScreen.storyboard */; };
 		6951B18C1F1EF3D9001FA9C0 /* LT2048Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6951B18B1F1EF3D9001FA9C0 /* LT2048Tests.m */; };
 		6951B1971F1EF3D9001FA9C0 /* LT2048UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6951B1961F1EF3D9001FA9C0 /* LT2048UITests.m */; };
+		695DA1651F1F403400A731BD /* LT2048ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA1641F1F403400A731BD /* LT2048ViewController.m */; };
+		695DA16A1F1F472C00A731BD /* LTScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA1691F1F472C00A731BD /* LTScoreView.m */; };
+		695DA16E1F1F515A00A731BD /* LTGlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA16D1F1F515A00A731BD /* LTGlobalState.m */; };
+		6968FE4C1F1F5DB20078BC25 /* LT2048Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA1711F1F52E100A731BD /* LT2048Theme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,15 @@
 		6951B1921F1EF3D9001FA9C0 /* LT2048UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LT2048UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6951B1961F1EF3D9001FA9C0 /* LT2048UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LT2048UITests.m; sourceTree = "<group>"; };
 		6951B1981F1EF3D9001FA9C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		695DA1631F1F403400A731BD /* LT2048ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048ViewController.h; sourceTree = "<group>"; };
+		695DA1641F1F403400A731BD /* LT2048ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048ViewController.m; sourceTree = "<group>"; };
+		695DA1681F1F472C00A731BD /* LTScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTScoreView.h; sourceTree = "<group>"; };
+		695DA1691F1F472C00A731BD /* LTScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTScoreView.m; sourceTree = "<group>"; };
+		695DA16C1F1F515A00A731BD /* LTGlobalState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTGlobalState.h; sourceTree = "<group>"; };
+		695DA16D1F1F515A00A731BD /* LTGlobalState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTGlobalState.m; sourceTree = "<group>"; };
+		695DA1701F1F52E100A731BD /* LT2048Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048Theme.h; sourceTree = "<group>"; };
+		695DA1711F1F52E100A731BD /* LT2048Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048Theme.m; sourceTree = "<group>"; };
+		6968FE4B1F1F5D2D0078BC25 /* LTGame.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTGame.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +94,7 @@
 		6951B1651F1EF3D9001FA9C0 = {
 			isa = PBXGroup;
 			children = (
-				6951B1701F1EF3D9001FA9C0 /* LT2048 */,
+				6951B1701F1EF3D9001FA9C0 /* GAME */,
 				6951B18A1F1EF3D9001FA9C0 /* LT2048Tests */,
 				6951B1951F1EF3D9001FA9C0 /* LT2048UITests */,
 				6951B16F1F1EF3D9001FA9C0 /* Products */,
@@ -98,9 +111,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6951B1701F1EF3D9001FA9C0 /* LT2048 */ = {
+		6951B1701F1EF3D9001FA9C0 /* GAME */ = {
 			isa = PBXGroup;
 			children = (
+				695DA16B1F1F512600A731BD /* Global */,
+				695DA1621F1F3FE200A731BD /* LT2048 */,
 				6951B1741F1EF3D9001FA9C0 /* AppDelegate.h */,
 				6951B1751F1EF3D9001FA9C0 /* AppDelegate.m */,
 				6951B1771F1EF3D9001FA9C0 /* ViewController.h */,
@@ -111,6 +126,7 @@
 				6951B1821F1EF3D9001FA9C0 /* Info.plist */,
 				6951B1711F1EF3D9001FA9C0 /* Supporting Files */,
 			);
+			name = GAME;
 			path = LT2048;
 			sourceTree = "<group>";
 		};
@@ -118,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				6951B1721F1EF3D9001FA9C0 /* main.m */,
+				6968FE4B1F1F5D2D0078BC25 /* LTGame.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +155,52 @@
 				6951B1981F1EF3D9001FA9C0 /* Info.plist */,
 			);
 			path = LT2048UITests;
+			sourceTree = "<group>";
+		};
+		695DA1621F1F3FE200A731BD /* LT2048 */ = {
+			isa = PBXGroup;
+			children = (
+				695DA16F1F1F528900A731BD /* Appearance */,
+				695DA1661F1F46F700A731BD /* Controller */,
+				695DA1671F1F470400A731BD /* View */,
+			);
+			name = LT2048;
+			sourceTree = "<group>";
+		};
+		695DA1661F1F46F700A731BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				695DA1631F1F403400A731BD /* LT2048ViewController.h */,
+				695DA1641F1F403400A731BD /* LT2048ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		695DA1671F1F470400A731BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				695DA1681F1F472C00A731BD /* LTScoreView.h */,
+				695DA1691F1F472C00A731BD /* LTScoreView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		695DA16B1F1F512600A731BD /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				695DA16C1F1F515A00A731BD /* LTGlobalState.h */,
+				695DA16D1F1F515A00A731BD /* LTGlobalState.m */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		695DA16F1F1F528900A731BD /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				695DA1701F1F52E100A731BD /* LT2048Theme.h */,
+				695DA1711F1F52E100A731BD /* LT2048Theme.m */,
+			);
+			name = Appearance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695DA16A1F1F472C00A731BD /* LTScoreView.m in Sources */,
 				6951B1791F1EF3D9001FA9C0 /* ViewController.m in Sources */,
 				6951B1761F1EF3D9001FA9C0 /* AppDelegate.m in Sources */,
+				6968FE4C1F1F5DB20078BC25 /* LT2048Theme.m in Sources */,
+				695DA1651F1F403400A731BD /* LT2048ViewController.m in Sources */,
+				695DA16E1F1F515A00A731BD /* LTGlobalState.m in Sources */,
 				6951B1731F1EF3D9001FA9C0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,10 +492,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SH6S8EAT65;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/lt/Desktop/MyFun/LT2048/LT2048/LTGame.pch;
 				INFOPLIST_FILE = LT2048/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tl.LT2048;
+				PRODUCT_BUNDLE_IDENTIFIER = LT2048;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -437,10 +507,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SH6S8EAT65;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/lt/Desktop/MyFun/LT2048/LT2048/LTGame.pch;
 				INFOPLIST_FILE = LT2048/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tl.LT2048;
+				PRODUCT_BUNDLE_IDENTIFIER = LT2048;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -514,6 +587,7 @@
 				6951B19D1F1EF3D9001FA9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6951B19E1F1EF3D9001FA9C0 /* Build configuration list for PBXNativeTarget "LT2048Tests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +596,7 @@
 				6951B1A01F1EF3D9001FA9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6951B1A11F1EF3D9001FA9C0 /* Build configuration list for PBXNativeTarget "LT2048UITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +605,7 @@
 				6951B1A31F1EF3D9001FA9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
