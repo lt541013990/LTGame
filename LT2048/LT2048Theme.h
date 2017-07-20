@@ -11,6 +11,11 @@
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
 #define RGBWITHHEX(c)       [UIColor colorWithRed:((c>>16)&0xFF)/255.0 green:((c>>8)&0xFF)/255.0 blue:(c&0xFF)/255.0 alpha:1.0]
 
+typedef NS_ENUM(NSInteger, LT2048ThemeType) {
+    LT2048ThemeDefault = 0,
+    LT2048ThemeVibrant,
+    LT2048ThemeJoyful
+};
 
 @protocol LT2048Theme <NSObject>
 
@@ -51,6 +56,6 @@
 
 @interface LT2048Theme : NSObject
 
-+ (Class)themeClassForType:(NSInteger)type;
++ (Class)themeClassForType:(LT2048ThemeType)type;
 
 @end

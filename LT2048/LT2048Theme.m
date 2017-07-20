@@ -324,14 +324,16 @@
 @end
 
 @implementation LT2048Theme
-+ (Class)themeClassForType:(NSInteger)type
++ (Class)themeClassForType:(LT2048ThemeType)type
 {
     switch (type) {
-        case 1:
+        case LT2048ThemeVibrant:
             return [LT2048VibrantTheme class];
-        case 2:
+            
+        case LT2048ThemeJoyful:
             return [LT2048JoyfulTheme class];
-        default:
+            
+        case LT2048ThemeDefault:
             return [LT2048DefaultTheme class];
     }
 }
