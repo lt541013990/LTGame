@@ -15,6 +15,11 @@
 		6951B1811F1EF3D9001FA9C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6951B17F1F1EF3D9001FA9C0 /* LaunchScreen.storyboard */; };
 		6951B18C1F1EF3D9001FA9C0 /* LT2048Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6951B18B1F1EF3D9001FA9C0 /* LT2048Tests.m */; };
 		6951B1971F1EF3D9001FA9C0 /* LT2048UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6951B1961F1EF3D9001FA9C0 /* LT2048UITests.m */; };
+		695705171F219A740030BEA4 /* LT2048Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 695705161F219A740030BEA4 /* LT2048Overlay.m */; };
+		6957051A1F219C5D0030BEA4 /* LT2048GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695705191F219C5D0030BEA4 /* LT2048GridView.m */; };
+		6957051E1F21A3600030BEA4 /* LT2048Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957051D1F21A3600030BEA4 /* LT2048Grid.m */; };
+		695705211F21A3820030BEA4 /* LT2048Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 695705201F21A3820030BEA4 /* LT2048Cell.m */; };
+		695705241F21A3B00030BEA4 /* LT2048Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 695705231F21A3B00030BEA4 /* LT2048Tile.m */; };
 		695DA1651F1F403400A731BD /* LT2048ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA1641F1F403400A731BD /* LT2048ViewController.m */; };
 		695DA16A1F1F472C00A731BD /* LTScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA1691F1F472C00A731BD /* LTScoreView.m */; };
 		695DA16E1F1F515A00A731BD /* LTGlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA16D1F1F515A00A731BD /* LTGlobalState.m */; };
@@ -55,6 +60,16 @@
 		6951B1921F1EF3D9001FA9C0 /* LT2048UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LT2048UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6951B1961F1EF3D9001FA9C0 /* LT2048UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LT2048UITests.m; sourceTree = "<group>"; };
 		6951B1981F1EF3D9001FA9C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		695705151F219A740030BEA4 /* LT2048Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048Overlay.h; sourceTree = "<group>"; };
+		695705161F219A740030BEA4 /* LT2048Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048Overlay.m; sourceTree = "<group>"; };
+		695705181F219C5D0030BEA4 /* LT2048GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048GridView.h; sourceTree = "<group>"; };
+		695705191F219C5D0030BEA4 /* LT2048GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048GridView.m; sourceTree = "<group>"; };
+		6957051C1F21A3600030BEA4 /* LT2048Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048Grid.h; sourceTree = "<group>"; };
+		6957051D1F21A3600030BEA4 /* LT2048Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048Grid.m; sourceTree = "<group>"; };
+		6957051F1F21A3820030BEA4 /* LT2048Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048Cell.h; sourceTree = "<group>"; };
+		695705201F21A3820030BEA4 /* LT2048Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048Cell.m; sourceTree = "<group>"; };
+		695705221F21A3B00030BEA4 /* LT2048Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048Tile.h; sourceTree = "<group>"; };
+		695705231F21A3B00030BEA4 /* LT2048Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048Tile.m; sourceTree = "<group>"; };
 		695879C61F208CC800D71A1F /* LT2048Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048Position.h; sourceTree = "<group>"; };
 		695DA1631F1F403400A731BD /* LT2048ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048ViewController.h; sourceTree = "<group>"; };
 		695DA1641F1F403400A731BD /* LT2048ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048ViewController.m; sourceTree = "<group>"; };
@@ -158,9 +173,23 @@
 			path = LT2048UITests;
 			sourceTree = "<group>";
 		};
+		6957051B1F21A31E0030BEA4 /* LT2048Sprite Kit */ = {
+			isa = PBXGroup;
+			children = (
+				6957051C1F21A3600030BEA4 /* LT2048Grid.h */,
+				6957051D1F21A3600030BEA4 /* LT2048Grid.m */,
+				6957051F1F21A3820030BEA4 /* LT2048Cell.h */,
+				695705201F21A3820030BEA4 /* LT2048Cell.m */,
+				695705221F21A3B00030BEA4 /* LT2048Tile.h */,
+				695705231F21A3B00030BEA4 /* LT2048Tile.m */,
+			);
+			name = "LT2048Sp\U0010rite Kit";
+			sourceTree = "<group>";
+		};
 		695DA1621F1F3FE200A731BD /* LT2048 */ = {
 			isa = PBXGroup;
 			children = (
+				6957051B1F21A31E0030BEA4 /* LT2048Sprite Kit */,
 				695DA16F1F1F528900A731BD /* Appearance */,
 				695DA1661F1F46F700A731BD /* Controller */,
 				695DA1671F1F470400A731BD /* View */,
@@ -182,6 +211,10 @@
 			children = (
 				695DA1681F1F472C00A731BD /* LTScoreView.h */,
 				695DA1691F1F472C00A731BD /* LTScoreView.m */,
+				695705151F219A740030BEA4 /* LT2048Overlay.h */,
+				695705161F219A740030BEA4 /* LT2048Overlay.m */,
+				695705181F219C5D0030BEA4 /* LT2048GridView.h */,
+				695705191F219C5D0030BEA4 /* LT2048GridView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -342,12 +375,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				695DA16A1F1F472C00A731BD /* LTScoreView.m in Sources */,
+				695705211F21A3820030BEA4 /* LT2048Cell.m in Sources */,
 				6951B1791F1EF3D9001FA9C0 /* ViewController.m in Sources */,
+				695705241F21A3B00030BEA4 /* LT2048Tile.m in Sources */,
+				695705171F219A740030BEA4 /* LT2048Overlay.m in Sources */,
 				6951B1761F1EF3D9001FA9C0 /* AppDelegate.m in Sources */,
 				6968FE4C1F1F5DB20078BC25 /* LT2048Theme.m in Sources */,
 				695DA1651F1F403400A731BD /* LT2048ViewController.m in Sources */,
 				695DA16E1F1F515A00A731BD /* LTGlobalState.m in Sources */,
 				6951B1731F1EF3D9001FA9C0 /* main.m in Sources */,
+				6957051A1F219C5D0030BEA4 /* LT2048GridView.m in Sources */,
+				6957051E1F21A3600030BEA4 /* LT2048Grid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
