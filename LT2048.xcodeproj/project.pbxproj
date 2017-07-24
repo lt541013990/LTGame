@@ -24,6 +24,8 @@
 		695DA16A1F1F472C00A731BD /* LTScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA1691F1F472C00A731BD /* LTScoreView.m */; };
 		695DA16E1F1F515A00A731BD /* LTGlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA16D1F1F515A00A731BD /* LTGlobalState.m */; };
 		6968FE4C1F1F5DB20078BC25 /* LT2048Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 695DA1711F1F52E100A731BD /* LT2048Theme.m */; };
+		6987C81D1F25C5D8005A0602 /* LT2048Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6987C81C1F25C5D8005A0602 /* LT2048Scene.m */; };
+		6987C8211F25C627005A0602 /* LT2048GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6987C8201F25C627005A0602 /* LT2048GameManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,10 @@
 		695DA1701F1F52E100A731BD /* LT2048Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048Theme.h; sourceTree = "<group>"; };
 		695DA1711F1F52E100A731BD /* LT2048Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048Theme.m; sourceTree = "<group>"; };
 		6968FE4B1F1F5D2D0078BC25 /* LTGame.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTGame.pch; sourceTree = "<group>"; };
+		6987C81B1F25C5D8005A0602 /* LT2048Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048Scene.h; sourceTree = "<group>"; };
+		6987C81C1F25C5D8005A0602 /* LT2048Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048Scene.m; sourceTree = "<group>"; };
+		6987C81F1F25C627005A0602 /* LT2048GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048GameManager.h; sourceTree = "<group>"; };
+		6987C8201F25C627005A0602 /* LT2048GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048GameManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,7 @@
 		695DA1621F1F3FE200A731BD /* LT2048 */ = {
 			isa = PBXGroup;
 			children = (
+				6987C81E1F25C600005A0602 /* state */,
 				6957051B1F21A31E0030BEA4 /* LT2048Sprite Kit */,
 				695DA16F1F1F528900A731BD /* Appearance */,
 				695DA1661F1F46F700A731BD /* Controller */,
@@ -215,6 +222,8 @@
 				695705161F219A740030BEA4 /* LT2048Overlay.m */,
 				695705181F219C5D0030BEA4 /* LT2048GridView.h */,
 				695705191F219C5D0030BEA4 /* LT2048GridView.m */,
+				6987C81B1F25C5D8005A0602 /* LT2048Scene.h */,
+				6987C81C1F25C5D8005A0602 /* LT2048Scene.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -236,6 +245,15 @@
 				695879C61F208CC800D71A1F /* LT2048Position.h */,
 			);
 			name = Appearance;
+			sourceTree = "<group>";
+		};
+		6987C81E1F25C600005A0602 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				6987C81F1F25C627005A0602 /* LT2048GameManager.h */,
+				6987C8201F25C627005A0602 /* LT2048GameManager.m */,
+			);
+			name = state;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,11 +397,13 @@
 				6951B1791F1EF3D9001FA9C0 /* ViewController.m in Sources */,
 				695705241F21A3B00030BEA4 /* LT2048Tile.m in Sources */,
 				695705171F219A740030BEA4 /* LT2048Overlay.m in Sources */,
+				6987C81D1F25C5D8005A0602 /* LT2048Scene.m in Sources */,
 				6951B1761F1EF3D9001FA9C0 /* AppDelegate.m in Sources */,
 				6968FE4C1F1F5DB20078BC25 /* LT2048Theme.m in Sources */,
 				695DA1651F1F403400A731BD /* LT2048ViewController.m in Sources */,
 				695DA16E1F1F515A00A731BD /* LTGlobalState.m in Sources */,
 				6951B1731F1EF3D9001FA9C0 /* main.m in Sources */,
+				6987C8211F25C627005A0602 /* LT2048GameManager.m in Sources */,
 				6957051A1F219C5D0030BEA4 /* LT2048GridView.m in Sources */,
 				6957051E1F21A3600030BEA4 /* LT2048Grid.m in Sources */,
 			);

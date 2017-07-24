@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class LT2048Grid;
+
 @interface LT2048GridView : UIView
 
 + (UIImage *)gridImageWithGrid:(LT2048Grid *)grid;
+
++ (UIImage *)gridImageWithOverlay;
 
 @end
