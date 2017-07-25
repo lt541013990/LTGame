@@ -13,6 +13,9 @@
 
 @interface LT2048Scene : SKScene
 
+@property (nonatomic, weak) LT2048ViewController *controller;
+
+
 - (void)startNewGame;
 
 - (void)loadBoardWithGrid:(LT2048Grid *)grid;

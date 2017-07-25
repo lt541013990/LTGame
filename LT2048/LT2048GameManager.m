@@ -52,7 +52,7 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower){
     [_addTileDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
-- (void)addTowRandowTiles
+- (void)addTwoRandomTiles
 {
     if (_grid.scene.children.count <= 1) {
         [_grid insertTileAtRandomAvailablePositionWithDelay:NO];
@@ -65,7 +65,7 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower){
 {
     __block LT2048Tile *tile = nil;
     
-    BOOL reverse = direction = LT2048DirectionUp || direction == LT2048DirectionRight;
+    BOOL reverse = direction == LT2048DirectionUp || direction == LT2048DirectionRight;
     NSInteger unit = reverse ? 1 : -1;
     
     if (direction == LT2048DirectionUp || direction == LT2048DirectionDown) {
@@ -146,36 +146,38 @@ BOOL iterate(NSInteger value, BOOL countUp, NSInteger upper, NSInteger lower){
             }
         }reverseOrder:reverse];
         
-        if (!_pendingScore) {
-            return;
-        }
-        
-        [_grid forEach:^(LT2048Position position) {
-            LT2048Tile *tile = [_grid tileAtPosition:position];
-            if (tile) {
-                [tile commitPendingActions];
-                if (tile.level >= GSTATE.winninglevel) {
-                    _won = YES;
-                }
-            }
-        }reverseOrder:reverse];
-        
-        [self materializePendingScore];
-        
-        if (!_keepPlaying && _won) {
-            _keepPlaying = YES;
-            [_grid.scene.controller endGame:YES];
-        }
-        
-        [_grid insertTileAtRandomAvailablePositionWithDelay:YES];
-        if (GSTATE.dimension == 5 && GSTATE.gameType == LTGameTypePowerOf2) {
-            [_grid insertTileAtRandomAvailablePositionWithDelay:YES];
-        }
-        
-        if (![self moveAvailable]) {
-            [_grid.scene.controller endGame:NO];
-        }
     }
+    
+    if (!_pendingScore) {
+        return;
+    }
+    
+    [_grid forEach:^(LT2048Position position) {
+        LT2048Tile *tile = [_grid tileAtPosition:position];
+        if (tile) {
+            [tile commitPendingActions];
+            if (tile.level >= GSTATE.winninglevel) {
+                _won = YES;
+            }
+        }
+    }reverseOrder:reverse];
+    
+    [self materializePendingScore];
+    
+    if (!_keepPlaying && _won) {
+        _keepPlaying = YES;
+        [_grid.scene.controller endGame:YES];
+    }
+    
+    [_grid insertTileAtRandomAvailablePositionWithDelay:YES];
+    if (GSTATE.dimension == 5 && GSTATE.gameType == LTGameTypePowerOf2) {
+        [_grid insertTileAtRandomAvailablePositionWithDelay:YES];
+    }
+    
+    if (![self moveAvailable]) {
+        [_grid.scene.controller endGame:NO];
+    }
+
 }
 
 # pragma mark - Score

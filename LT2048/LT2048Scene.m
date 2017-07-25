@@ -9,6 +9,7 @@
 #import "LT2048Scene.h"
 #import "LT2048GridView.h"
 #import "LT2048GameManager.h"
+#import "LT2048ViewController.h"
 
 #define EFFECTIVE_SWIPE_DISTANCE_THRESHOLD 20.0f
 

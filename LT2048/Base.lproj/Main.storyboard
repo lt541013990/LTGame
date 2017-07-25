@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -61,10 +61,10 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="score" destination="s6e-4m-bYD" id="Wgl-83-uMw"/>
-                                    <outlet property="title" destination="j3h-RX-eqn" id="K3b-On-hnd"/>
+                                    <outlet property="title" destination="j3h-RX-eqn" id="QTq-xD-bzr"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8IS-UN-Ha5" userLabel="Best View">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8IS-UN-Ha5" userLabel="Best View" customClass="LTScoreView">
                                 <rect key="frame" x="275" y="44" width="74" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -75,7 +75,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIz-UO-8aY" userLabel="Title">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIz-UO-8aY" userLabel="Title">
                                         <rect key="frame" x="16" y="0.0" width="43" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -84,6 +84,10 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="score" destination="09E-eW-H3a" id="dWR-hK-p2k"/>
+                                    <outlet property="title" destination="LIz-UO-8aY" id="bhD-aB-eGp"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsS-GH-IkC">
                                 <rect key="frame" x="275" y="107" width="74" height="30"/>
@@ -92,6 +96,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wYo-HR-CQI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icd-Wv-4io" userLabel="Settings">
                                 <rect key="frame" x="183" y="107" width="74" height="30"/>
@@ -111,6 +118,9 @@
                                         <state key="normal" title="Restart Game">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQ3-Kv-Vs3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-6S-r4y">
                                         <rect key="frame" x="74" y="90" width="92" height="30"/>
@@ -118,6 +128,9 @@
                                         <state key="normal" title="Keep Playing">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="keepPlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwm-bU-53F"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU WON!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkg-rc-uAX" userLabel="Message">
                                         <rect key="frame" x="38" y="8" width="164" height="37"/>
@@ -143,6 +156,16 @@
                             <constraint firstAttribute="trailing" secondItem="uxG-2e-j0W" secondAttribute="trailing" id="hDx-gD-dYG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="_bestView" destination="8IS-UN-Ha5" id="ddZ-e9-Gze"/>
+                        <outlet property="_overlay" destination="ekM-WH-ygg" id="Hkn-X8-lCz"/>
+                        <outlet property="_overlayBacnground" destination="uxG-2e-j0W" id="TVv-Hg-XwK"/>
+                        <outlet property="_restartButton" destination="jsS-GH-IkC" id="KHY-w9-h4I"/>
+                        <outlet property="_scoreView" destination="olB-hs-bDT" id="YGa-6v-a2K"/>
+                        <outlet property="_settingButton" destination="Icd-Wv-4io" id="PFz-89-5oa"/>
+                        <outlet property="_subtitle" destination="6Qn-eO-mEa" id="0oK-YN-y9C"/>
+                        <outlet property="_targetScore" destination="dEN-Vz-bxE" id="nHj-zY-8pM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,7 +7,12 @@
 //
 
 #import "ViewController.h"
+#import <SpriteKit/SpriteKit.h>
 
-@interface LT2048ViewController : ViewController
+@interface LT2048ViewController : UIViewController
+
+- (void)updateScore:(NSInteger)score;
+
+- (void)endGame:(BOOL)won;
 
 @end

@@ -36,7 +36,45 @@
     LT2048GridView *view = [[LT2048GridView alloc] init];
     [backgroundView addSubview:view];
     
+    [grid forEach:^(LT2048Position position) {
+        CALayer *layer = [CALayer layer];
+        CGPoint point = [GSTATE locationOfPosition:position];
+        
+        CGRect frame = layer.frame;
+        frame.size = CGSizeMake(GSTATE.titleSize, GSTATE.titleSize);
+        frame.origin = CGPointMake(point.x, SCREEN_HEIGHT - point.y - GSTATE.titleSize);
+        layer.frame = frame;
+        
+        layer.backgroundColor = [GSTATE boardColor].CGColor;
+        layer.cornerRadius = GSTATE.cornerRadius;
+        layer.masksToBounds = YES;
+        [backgroundView.layer addSublayer:layer];
+    }reverseOrder:NO];
     
+    return [LT2048GridView snapshotWithView:backgroundView];
+}
+
++ (UIImage *)gridImageWithOverlay
+{
+    UIView *backgroundView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    backgroundView.backgroundColor = [UIColor clearColor];
+    backgroundView.opaque = NO;
+    
+    LT2048GridView *view = [[LT2048GridView alloc] init];
+    view.backgroundColor = [[GSTATE backgroundColor] colorWithAlphaComponent:0.8];
+    [backgroundView addSubview:view];
+    
+    return [LT2048GridView snapshotWithView:backgroundView];
+}
+
++ (UIImage *)snapshotWithView:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, view.opaque, 0.0);
+    [[view layer] renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 /*
