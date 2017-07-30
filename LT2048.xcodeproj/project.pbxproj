@@ -555,7 +555,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SH6S8EAT65;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/lt/Desktop/MyFun/LT2048/LT2048/LTGame.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LT2048/LTGame.pch";
 				INFOPLIST_FILE = LT2048/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LT2048;
@@ -570,7 +570,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/lt/Desktop/MyFun/LT2048/LT2048/LTGame.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LT2048/LTGame.pch";
 				INFOPLIST_FILE = LT2048/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LT2048;
