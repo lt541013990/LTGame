@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6918198F1F306E420086AEF6 /* LT2048SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6918198E1F306E420086AEF6 /* LT2048SettingsViewController.m */; };
+		691819921F3076DC0086AEF6 /* LT2048SettingsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691819911F3076DC0086AEF6 /* LT2048SettingsDetailViewController.m */; };
 		6951B1731F1EF3D9001FA9C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6951B1721F1EF3D9001FA9C0 /* main.m */; };
 		6951B1761F1EF3D9001FA9C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6951B1751F1EF3D9001FA9C0 /* AppDelegate.m */; };
 		6951B1791F1EF3D9001FA9C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6951B1781F1EF3D9001FA9C0 /* ViewController.m */; };
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6918198D1F306E420086AEF6 /* LT2048SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048SettingsViewController.h; sourceTree = "<group>"; };
+		6918198E1F306E420086AEF6 /* LT2048SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048SettingsViewController.m; sourceTree = "<group>"; };
+		691819901F3076DC0086AEF6 /* LT2048SettingsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LT2048SettingsDetailViewController.h; sourceTree = "<group>"; };
+		691819911F3076DC0086AEF6 /* LT2048SettingsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LT2048SettingsDetailViewController.m; sourceTree = "<group>"; };
 		6951B16E1F1EF3D9001FA9C0 /* LT2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LT2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6951B1721F1EF3D9001FA9C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6951B1741F1EF3D9001FA9C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,6 +217,10 @@
 			children = (
 				695DA1631F1F403400A731BD /* LT2048ViewController.h */,
 				695DA1641F1F403400A731BD /* LT2048ViewController.m */,
+				6918198D1F306E420086AEF6 /* LT2048SettingsViewController.h */,
+				6918198E1F306E420086AEF6 /* LT2048SettingsViewController.m */,
+				691819901F3076DC0086AEF6 /* LT2048SettingsDetailViewController.h */,
+				691819911F3076DC0086AEF6 /* LT2048SettingsDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -392,9 +402,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691819921F3076DC0086AEF6 /* LT2048SettingsDetailViewController.m in Sources */,
 				695DA16A1F1F472C00A731BD /* LTScoreView.m in Sources */,
 				695705211F21A3820030BEA4 /* LT2048Cell.m in Sources */,
 				6951B1791F1EF3D9001FA9C0 /* ViewController.m in Sources */,
+				6918198F1F306E420086AEF6 /* LT2048SettingsViewController.m in Sources */,
 				695705241F21A3B00030BEA4 /* LT2048Tile.m in Sources */,
 				695705171F219A740030BEA4 /* LT2048Overlay.m in Sources */,
 				6987C81D1F25C5D8005A0602 /* LT2048Scene.m in Sources */,

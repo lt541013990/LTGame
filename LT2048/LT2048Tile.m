@@ -162,7 +162,6 @@ typedef void (^LT2048Block)();
     
     
     CGPoint point = [GSTATE locationOfPosition:cell.position];
-    NSLog(@"self x = %f y = %f point x = %f y = %f",self.position.x,self.position.y,point.x,point.y);
     [_pendingActions addObject:[SKAction moveTo:[GSTATE locationOfPosition:cell.position] duration:GSTATE.animationDuration]];
     self.cell.tile = nil;
     cell.tile = self;
