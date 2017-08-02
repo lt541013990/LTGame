@@ -159,10 +159,8 @@ typedef void (^LT2048Block)();
 
 - (void)moveToCell:(LT2048Cell *)cell
 {
-    
-    
     CGPoint point = [GSTATE locationOfPosition:cell.position];
-    [_pendingActions addObject:[SKAction moveTo:[GSTATE locationOfPosition:cell.position] duration:GSTATE.animationDuration]];
+    [_pendingActions addObject:[SKAction moveTo:point duration:GSTATE.animationDuration]];
     self.cell.tile = nil;
     cell.tile = self;
 }

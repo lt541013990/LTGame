@@ -29,7 +29,7 @@
     LT2048Scene *_scene;
     
     IBOutlet LT2048Overlay *_overlay;
-    IBOutlet UIImageView *_overlayBacnground;
+    IBOutlet UIImageView *_overlayBackground;
 }
 
 - (void)viewDidLoad {
@@ -45,7 +45,7 @@
     _settingButton.layer.masksToBounds = YES;
     
     _overlay.hidden = YES;
-    _overlayBacnground.hidden = YES;
+    _overlayBackground.hidden = YES;
     
     SKView * skView = (SKView *)self.view;
     
@@ -58,6 +58,8 @@
     
     _scene = scene;
     _scene.controller = self;
+    
+    [self endGame:NO];
 
 }
 
@@ -94,7 +96,7 @@
     _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14];
     _subtitle.text = [NSString stringWithFormat:@"Join the numbers to get to %ld!",target];
     
-    _overlay.message.font = [UIFont fontWithName: [GSTATE boldFontName] size:17];
+    _overlay.message.font = [UIFont fontWithName: [GSTATE boldFontName] size:36];
     _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
     _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
     
@@ -144,8 +146,8 @@
 {
     _overlay.hidden = NO;
     _overlay.alpha = 0;
-    _overlayBacnground.hidden = NO;
-    _overlayBacnground.alpha = 0;
+    _overlayBackground.hidden = NO;
+    _overlayBackground.alpha = 0;
     
     if (!won) {
         _overlay.keepPlaying.hidden = YES;
@@ -155,15 +157,17 @@
         _overlay.message.text = @"You Win";
     }
     
-    _overlayBacnground.image = [LT2048GridView gridImageWithOverlay];
+    _overlayBackground.image = [LT2048GridView gridImageWithOverlay];
     
     CGFloat verticalOffset = SCREEN_HEIGHT - GSTATE.verticalOffset;
     NSInteger side = GSTATE.dimension * (GSTATE.titleSize +GSTATE.borderWidth) + GSTATE.borderWidth;
     _overlay.center = CGPointMake(GSTATE.horizontalOffset + side / 2, verticalOffset - side / 2);
+//
+//    _overlay.frame = CGRectMake(GSTATE.horizontalOffset, verticalOffset - side, side, side);
     
     [UIView animateWithDuration:.5f delay:1.5f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _overlay.alpha = 1;
-        _overlayBacnground.alpha = 1;
+        _overlayBackground.alpha = 1;
     }completion:^(BOOL finished) {
         ((SKView *)self.view).paused = YES;
     }];
@@ -175,10 +179,10 @@
     if (!_overlay.hidden) {
         [UIView animateWithDuration:.5f animations:^{
             _overlay.alpha = 0;
-            _overlayBacnground.alpha = 0;
+            _overlayBackground.alpha = 0;
         } completion:^(BOOL finished){
             _overlay.hidden = YES;
-            _overlayBacnground.hidden = YES;
+            _overlayBackground.hidden = YES;
         }];
     }
 
