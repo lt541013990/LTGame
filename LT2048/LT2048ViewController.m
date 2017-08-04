@@ -58,9 +58,6 @@
     
     _scene = scene;
     _scene.controller = self;
-    
-    [self endGame:NO];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -162,9 +159,7 @@
     CGFloat verticalOffset = SCREEN_HEIGHT - GSTATE.verticalOffset;
     NSInteger side = GSTATE.dimension * (GSTATE.titleSize +GSTATE.borderWidth) + GSTATE.borderWidth;
     _overlay.center = CGPointMake(GSTATE.horizontalOffset + side / 2, verticalOffset - side / 2);
-//
-//    _overlay.frame = CGRectMake(GSTATE.horizontalOffset, verticalOffset - side, side, side);
-    
+
     [UIView animateWithDuration:.5f delay:1.5f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _overlay.alpha = 1;
         _overlayBackground.alpha = 1;
